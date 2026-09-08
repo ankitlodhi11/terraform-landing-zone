@@ -22,5 +22,9 @@ stages:
         displayName: 'Terraform Validate'
         inputs:
           provider: 'azurerm'
-          command: 'validate'
-          workingDirectory: '$(System.DefaultWorkingDirectory)/infradev'
+          command: 'init'
+          workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
+          backendAzureRmResourceGroupName: 'rg-statefile'
+          backendAzureRmStorageAccountName: 'stagefile123321'
+          backendAzureRmContainerName: 'tfsate'
+          backendAzureRmKey: 'dev.terraform.tfstate'
