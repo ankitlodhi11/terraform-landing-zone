@@ -2,13 +2,25 @@
 trigger:
 - main
 
-pool: dhurendar
+pool: 
+ name: dhurander
 
 stages:
-  - stage: 
+  - stage:
+    displayName: terraform
     jobs:
-      - job:
-        displayName: terraform init
-    -   task: TerraformInstaller@1
+    - job: 
+      displayName: new
+      steps:
+      - task: TerraformInstaller@1
         inputs:
           terraformVersion: 'latest'
+      # ========================================================
+    # TERRAFORM VALIDATE
+    # ========================================================
+      - task: TerraformTask@5
+        displayName: 'Terraform Validate'
+        inputs:
+          provider: 'azurerm'
+          command: 'validate'
+          workingDirectory: '$(System.DefaultWorkingDirectory)/infradev'
