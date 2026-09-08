@@ -24,6 +24,7 @@ stages:
           provider: 'azurerm'
           command: 'init'
           workingDirectory: '$(System.DefaultWorkingDirectory)/environment/dev'
+          backendServiceArm: 'data'
           backendAzureRmResourceGroupName: 'rg-statefile'
           backendAzureRmStorageAccountName: 'stagefile123321'
           backendAzureRmContainerName: 'tfsate'
