@@ -5,16 +5,16 @@ terraform {
       version = "5.0"
 
     }
-    }
-    backend "azurerm" {
-    resource_group_name  = "rg-pipeline"
-    storage_account_name = "azpipeline123"
+  }
+  backend "azurerm" {
+    resource_group_name  = "rg-statefile"
+    storage_account_name = "stagefile123321"
     container_name       = "tfstate"
     key                  = "dev.terraform.tfstate"
   }
 }
-###################
+
 provider "azurerm" {
   features {}
-  subscription_id = "d795138c-0a80-4512-900f-fa3e55032490"
+  subscription_id = "48d1c3d5-8796-4a68-8d00-c1d89903818f"
 }
