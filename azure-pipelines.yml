@@ -25,5 +25,5 @@ stages:
           backendServiceArm: 'data'
           backendAzureRmResourceGroupName: 'rg-statefile'
           backendAzureRmStorageAccountName: 'stagefile123321'
-          backendAzureRmContainerName: 'tfsate'
+          backendAzureRmContainerName: 'tfstate'
           backendAzureRmKey: 'dev.terraform.tfstate'
