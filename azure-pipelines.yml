@@ -15,9 +15,7 @@ stages:
       - task: TerraformInstaller@1
         inputs:
           terraformVersion: 'latest'
-      # ========================================================
-    # TERRAFORM VALIDATE
-    # ========================================================
+
       - task: TerraformTask@5
         displayName: 'Terraform Validate'
         inputs:
