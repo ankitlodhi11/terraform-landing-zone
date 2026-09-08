@@ -1,0 +1,14 @@
+
+trigger:
+- main
+
+pool: dhurendar
+
+stages:
+  - stage: 
+    jobs:
+      - job:
+        displayName: terraform init
+    -   task: TerraformInstaller@1
+        inputs:
+          terraformVersion: 'latest'
