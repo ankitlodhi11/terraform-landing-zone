@@ -14,8 +14,8 @@ module "virtualnetwork" {
   depends_on = [module.tinku]
 }
 
-module "subnet" {
-  source = "../../modules/subnet"
-  subnets = var.subnets
-  depends_on = [module.virtualnetwork]
-}
+# module "subnet" {
+#   source = "../../modules/subnet"
+#   subnets = var.subnets
+#   depends_on = [module.virtualnetwork]
+# }
